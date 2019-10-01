@@ -1,0 +1,164 @@
+/* 通用样式开始 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* 通用样式结束 */
+
+/* 头部开始 */
+.header {
+    height: 70px;
+    line-height: 70px;
+    background: #354457;
+}
+
+.header .logo {
+    width: 200px;
+    padding-left: 20px;
+}
+
+.header .logo img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.header .logo span {
+    color: #b3bcc5;
+    font-size: 14px;
+}
+
+/* 头部结束 */
+
+/* 左侧导航栏开始 */
+
+.left-menu {
+    width: 200px;
+    background: #4d5e70;
+    height: calc(100% - 70px);
+    float: left;
+}
+
+.left-menu dl {
+    line-height: 40px;
+    font-size: 14px;
+    color: #b3bcc5;
+
+}
+
+.left-menu dl dt {
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.left-menu dl dd {
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.left-menu dl dd.active {
+    background-color: #ddd;
+    color: #354457;
+}
+
+.left-menu dl dd:hover {
+    color: #354457;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 左侧导航栏结束 */
+
+/* 右侧主区域列表开始 */
+
+.right-content {
+    float: right;
+    background: #eee;
+    width: calc(100% - 200px);
+    height: calc(100% - 70px);
+}
+
+.right-content div.content-active {
+    display: block;
+}
+
+.right-content .student-list {
+    display: none;
+}
+
+.right-content .student-list table {
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.right-content .student-list table thead {
+    background-color: #e3e8ee;
+    color: #646987;
+    font-size: 14px;
+    height: 30px;
+}
+
+.right-content .student-list table tbody {
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.right-content .student-list table tbody .btn {
+    padding: 3px 10px;
+    color: #fff;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer
+}
+
+.right-content .student-list table tbody .edit {
+    background-color: #5cb85c;
+}
+
+.right-content .student-list table tbody .delete {
+    background-color: #d9534f;
+}
+
+/* 右侧主区域列表结束 */
+
+/* 右侧主区域添加学生开始 */
+
+.student-add form {
+    width: 400px;
+    margin: 50px auto;
+}
+
+form .item {
+    margin: 10px 0;
+}
+
+form .item label:not(.sex) {
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+}
+
+form .item .btn {
+    padding: 5px 25px;
+}
+
+.student-add {
+    display: none;
+}
+
+/* 右侧主区域添加学生结束 */
+
+/* 模式窗口弹出样式开始 */
+
+.modal {
+    display: none;
+}
+
+/* 模式窗口弹出样式结束 */
