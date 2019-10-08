@@ -7,7 +7,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,23 @@
     </div>
     <div class="right-content">
         <div id="student-list" class="student-list content-active">
+            <div class="search">
+                <div class="item">
+                    <label for="sex">性别</label>
+                    <select name="" id="sel-sex">
+                        <option value="-1">全部</option>
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="search">条件</label>
+                    <input type="text" id="sel-search">
+                </div>
+                <div class="item">
+                    <button class="query">查询</button>
+                </div>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -51,48 +68,52 @@
 
                 </tbody>
             </table>
+            <div class="pager"></div>
             <div class="modal">
-                <div class="mask"></div>
-                <div class="content">
-                    <h2>编辑表单</h2>
-                    <form>
-                        <div class="item">
-                            <label for="name">姓名</label>
-                            <input type="text" id="name">
-                        </div>
-                        <div class="item">
-                            <label for="sex">性别</label>
-                            <input type="radio" name="sex" checked="" id="male">
-                            <label class="sex" for="male" class="sex">男</label>
-                            <input type="radio" name="sex" id="female">
-                            <label class="sex" for="female" class="sex">女</label>
-                        </div>
-                        <div class="item">
-                            <label for="email">邮箱</label>
-                            <input type="text" id="email">
-                        </div>
-                        <div class="item">
-                            <label for="number">学号</label>
-                            <input type="text" id="number">
-                        </div>
-                        <div class="item">
-                            <label for="birth">出生年</label>
-                            <input type="text" id="birth">
-                        </div>
-                        <div class="item">
-                            <label for="phone">手机号</label>
-                            <input type="text" id="phone">
-                        </div>
-                        <div class="item">
-                            <label for="address">住址</label>
-                            <input type="text" id="address">
-                        </div>
-                        <div class="item">
-                            <label for=""></label>
-                            <input class="btn" type="submit" value="提交">
-                            <input class="btn" type="reset" value="重置">
-                        </div>
-                    </form>
+                <div class="mask">
+                    <h2>
+                        编辑表单
+                    </h2>
+                    <div class="content">
+                        <form id="edit-form">
+                            <div class="item">
+                                <label for="name">姓名</label>
+                                <input type="text" id="name">
+                            </div>
+                            <div class="item">
+                                <label>性别</label>
+                                <input type="radio" name="sex" checked="" id="male" value="0">
+                                <label class="sex" for="male">男</label>
+                                <input type="radio" name="sex" id="female" value="1">
+                                <label class="sex" for="female">女</label>
+                            </div>
+                            <div class="item">
+                                <label for="email">邮箱</label>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="item">
+                                <label for="sNo">学号</label>
+                                <input type="text" id="sNo">
+                            </div>
+                            <div class="item">
+                                <label for="birth">出生年</label>
+                                <input type="text" id="birth">
+                            </div>
+                            <div class="item">
+                                <label for="phone">手机号</label>
+                                <input type="text" id="phone">
+                            </div>
+                            <div class="item">
+                                <label for="address">住址</label>
+                                <input type="text" id="address">
+                            </div>
+                            <div class="item">
+                                <label for=""></label>
+                                <input class="btn" type="button" id="edit-student-btn" value="提交">
+                                <input class="btn" type="reset" value="重置">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,10 +125,10 @@
                 </div>
                 <div class="item">
                     <label for="sex">性别</label>
-                    <input type="radio" name="sex" checked="" id="male" value="0">
-                    <label class="sex" for="male" class="sex">男</label>
-                    <input type="radio" name="sex" id="female" value="1">
-                    <label class="sex" for="female" class="sex">女</label>
+                    <input type="radio" name="sex" checked id="add-form-male" value="0">
+                    <label class="sex" for="add-form-male">男</label>
+                    <input type="radio" name="sex" id="add-form-female" value="1">
+                    <label class="sex" for="add-form-female">女</label>
                 </div>
                 <div class="item">
                     <label for="email">邮箱</label>
@@ -136,7 +157,11 @@
                 </div>
             </form>
         </div>
+
     </div>
+    <script src="plugins/pager.js"></script>
+    <script src="plugins/confirm.js"></script>
+    <script src="plugins/message.js"></script>
     <script src="index.js"></script>
 </body>
 

@@ -1,12 +1,36 @@
+/*
+ * @Author: gexuerong 
+ * @Date: 2019-10-02 16:38:53 
+ * @Last Modified by: gexuerong
+ * @Last Modified time: 2019-10-06 00:15:22
+ */
+
+
 /* 通用样式开始 */
 * {
     margin: 0;
     padding: 0;
+    font-family: "Cascadia Code";
 }
 
 html,
 body {
     height: 100%;
+}
+button{
+    background:none;
+    border: none;
+    outline: none;
+}
+.confirm{
+    background:#008c8c;
+    padding: 5px 10px;
+    color: #fff;
+}
+.cancel{
+    background:red;
+    padding: 5px 10px;
+    color: #fff;
 }
 
 /* 通用样式结束 */
@@ -126,6 +150,17 @@ body {
     background-color: #d9534f;
 }
 
+.right-content .student-list .search .item{
+    display: inline-block;
+    padding: 10px 20px;
+}
+.right-content .student-list .search .query{
+    background-color: #008c8c;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
 /* 右侧主区域列表结束 */
 
 /* 右侧主区域添加学生开始 */
@@ -159,6 +194,66 @@ form .item .btn {
 
 .modal {
     display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0, 0,0.5);
 }
 
+.modal .mask{
+    position: absolute;
+    background:rgb(255, 255, 255);
+    width: 350px;
+    height: 400px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.modal .mask h2{
+    padding: 16px 20px;
+}
+.modal form{
+    margin: auto;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
 /* 模式窗口弹出样式结束 */
+
+
+/* 分页开始 */
+
+.pager{
+    text-align: center;
+}
+.pager .pager-item{
+    display: inline-block;
+    padding: 5px 7px;
+    border: solid 1px #ccc;
+    margin:2px;
+    cursor: pointer;
+    color: #008c8c;
+}
+.pager .pager-item.disabled{
+    color: #ccc;
+    cursor: not-allowed;
+}
+.pager .pager-item.number.active{
+    color: red;
+    border:0px;
+}
+.pager .pager-text{
+    margin:0 8px;
+}
+.pager .pager-text i{
+    font-style: normal;
+    margin: 0 4px;
+}
+/* 分页结束 */
